@@ -8,3 +8,27 @@ services:
       - 3000:3000
     volumes:
       - ./:/usr/app
+    depends_on:
+      - postgres
+    networks:
+      - rentx-network
+  postgres: 
+    image: postgres:latest
+    container_name: rentx-postgres
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_DB: rentx
+      POSTGRES_USER: rentx
+      POSTGRES_PASSWORD: rentx
+    volumes:
+      - pgdata:/data/postgres
+    networks:
+      - rentx-network
+
+volumes:
+  pgdata:
+
+networks:
+  rentx-network:
