@@ -3,8 +3,13 @@ import swaggerUi from "swagger-ui-express";
 
 import { router } from "./routes";
 import swaggerFile from "./swagger.json";
+import { AppDataSource } from "./database/typeorm/data-source";
 
 const app = express();
+
+AppDataSource.initialize().then(() => {
+
+});
 
 app.use(express.json());
 
