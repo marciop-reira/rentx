@@ -1,9 +1,10 @@
 import express from "express";
 import swaggerUi from "swagger-ui-express";
 
+import { appDataSource } from "./database/typeorm/data-source";
 import { router } from "./routes";
 import swaggerFile from "./swagger.json";
-import { appDataSource } from "./database/typeorm/data-source";
+import "./shared/container";
 
 const app = express();
 
