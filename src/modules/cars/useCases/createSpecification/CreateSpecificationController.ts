@@ -13,7 +13,7 @@ class CreateSpecificationController {
     try {
       await createSpecificationUseCase.execute({ name, description });
     } catch (error) {
-      return response.status(400).json({
+      return response.status(error.code || 500).json({
         error: error.message,
       });
     }
