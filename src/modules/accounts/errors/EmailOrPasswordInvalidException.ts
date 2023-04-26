@@ -1,5 +1,5 @@
 class EmailOrPasswordInvalidException extends Error {
-  public code: number;
+  public readonly code: number;
 
   constructor() {
     super();
