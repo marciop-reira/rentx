@@ -8,8 +8,8 @@ export const appDataSource = new DataSource({
   password: "rentx",
   database: "rentx",
   synchronize: true,
-  logging: true,
-  entities: ["./src/modules/cars/entities/*.ts"],
+  logging: false,
+  entities: ["./src/modules/*/entities/*.ts"],
   subscribers: [],
   migrations: ["./src/database/typeorm/migrations/*.ts"],
 });
