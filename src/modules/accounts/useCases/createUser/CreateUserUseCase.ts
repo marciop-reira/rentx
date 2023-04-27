@@ -9,7 +9,6 @@ interface IRequest {
   password: string;
   email: string;
   driver_license: string;
-  avatar: string;
 }
 
 @injectable()
@@ -24,7 +23,6 @@ class CreateUserUseCase {
     password,
     email,
     driver_license,
-    avatar,
   }: IRequest): Promise<void> {
     const userAlreadyExists = await this.usersRepository.findByEmail(email);
 
@@ -39,7 +37,6 @@ class CreateUserUseCase {
       password: passwordHash,
       email,
       driver_license,
-      avatar,
     });
   }
 }

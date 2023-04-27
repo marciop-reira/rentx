@@ -33,7 +33,7 @@ export async function authenticated(
       throw new UserDoesNotExistException();
     }
 
-    // request.user = user;
+    request.user = user;
 
     return next();
   } catch (error) {
