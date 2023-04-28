@@ -7,7 +7,7 @@ import { appDataSource } from "./database/typeorm/data-source";
 import { errors } from "./middlewares/errors";
 import { router } from "./routes";
 import swaggerFile from "./swagger.json";
-import "./shared/container";
+import "@shared/container";
 
 const app = express();
 

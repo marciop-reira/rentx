@@ -1,7 +1,5 @@
 import { NextFunction, Request, Response } from "express";
 
-import { UnauthorizedException } from "../modules/accounts/errors/UnauthorizedException";
-
 export function errors(
   error: any,
   request: Request,

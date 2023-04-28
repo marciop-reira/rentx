@@ -1,8 +1,8 @@
 import { hash } from "bcrypt";
 import { inject, injectable } from "tsyringe";
 
-import { AlreadyExistsException } from "../../../../shared/errors/AlreadyExistsExceptions";
-import { IUsersRepository } from "../../repositories/IUsersRepository";
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
+import { AlreadyExistsException } from "@shared/errors/AlreadyExistsExceptions";
 
 interface IRequest {
   name: string;

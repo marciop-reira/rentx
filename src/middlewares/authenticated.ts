@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from "express";
 import { verify } from "jsonwebtoken";
 
-import { UnauthorizedException } from "../modules/accounts/errors/UnauthorizedException";
-import { UserDoesNotExistException } from "../modules/accounts/errors/UserDoesNotExistException";
-import { UsersRepository } from "../modules/accounts/repositories/implementations/UsersRepository";
+import { UnauthorizedException } from "@modules/accounts/errors/UnauthorizedException";
+import { UserDoesNotExistException } from "@modules/accounts/errors/UserDoesNotExistException";
+import { UsersRepository } from "@modules/accounts/repositories/implementations/UsersRepository";
 
 interface IPayload {
   sub: string;

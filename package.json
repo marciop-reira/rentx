@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modelues --respawn src/server.ts",
-    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js -d src/database/typeorm/data-source.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modelues --respawn src/server.ts",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/database/typeorm/data-source.ts",
     "test": "jest"
   },
   "author": "",
@@ -46,6 +46,7 @@
     "prettier": "^2.8.2",
     "ts-jest": "^29.1.0",
     "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^4.9.4"
   }
 }
