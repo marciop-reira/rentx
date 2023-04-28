@@ -1,0 +1,2 @@
+process.env.JWT_SECRET_KEY="8e380127b72d00165a77f7ff35cf4ff542a9aaf6"
+process.env.JWT_EXPIRES_IN="86400"
