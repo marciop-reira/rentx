@@ -1,7 +1,7 @@
-import { appDataSource } from "database/typeorm/data-source";
 import { Repository } from "typeorm";
 
 import { Category } from "@modules/cars/infra/typeorm/entities/Category";
+import { appDataSource } from "@shared/infra/database/typeorm/data-source";
 
 import {
   ICategoriesRepository,
