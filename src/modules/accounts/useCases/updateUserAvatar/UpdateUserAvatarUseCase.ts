@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 import { deleteFile } from "utils/file";
 
-import { User } from "@modules/accounts/entities/User";
+import { User } from "@modules/accounts/infra/typeorm/User";
 import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 
 interface IRequest {

@@ -1,4 +1,4 @@
-import { User } from "@modules/accounts/entities/User";
+import { User } from "@modules/accounts/infra/typeorm/User";
 
 declare global {
   declare namespace Express {

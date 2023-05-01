@@ -4,8 +4,8 @@ import "express-async-errors";
 import swaggerUi from "swagger-ui-express";
 
 import { appDataSource } from "./database/typeorm/data-source";
-import { errors } from "./middlewares/errors";
 import { router } from "./routes";
+import { errors } from "./shared/infra/http/middlewares/errors";
 import swaggerFile from "./swagger.json";
 import "@shared/container";
 

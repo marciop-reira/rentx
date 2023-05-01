@@ -3,7 +3,7 @@ import { verify } from "jsonwebtoken";
 
 import { UnauthorizedException } from "@modules/accounts/errors/UnauthorizedException";
 import { UserDoesNotExistException } from "@modules/accounts/errors/UserDoesNotExistException";
-import { UsersRepository } from "@modules/accounts/repositories/implementations/UsersRepository";
+import { UsersRepository } from "@modules/accounts/infra/typeorm/repositories/UsersRepository";
 
 interface IPayload {
   sub: string;
