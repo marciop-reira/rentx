@@ -2,8 +2,8 @@
 
 ## Requisitos funcionais
 
-- [ ] Deve ser possível cadastrar um novo carro.
-- [ ] Deve ser possível listar todas as categorias.
+- [x] Deve ser possível cadastrar um novo carro.
+- [x] Deve ser possível listar todas as categorias.
 - [ ] Deve ser possível listar todos os carros.
 - [ ] Deve ser possível listar todos os carros disponíveis pela categoria.
 - [ ] Deve ser possível listar todos os carros disponíveis pela marca.
@@ -19,9 +19,9 @@
 
 ## Regras de negócio
 
-- [ ] Não deve ser possível cadastrar um carro com uma placa já cadastrada.
+- [x] Não deve ser possível cadastrar um carro com uma placa já cadastrada.
 - [ ] Não deve ser possível alterar a placa de uma carro já cadastrado.
-- [ ] O carro deve ser cadastrado, por padrão, como disponível.
+- [x] O carro deve ser cadastrado, por padrão, como disponível.
 - [ ] O registro de carros deve ser realizado por um usuário administrador.
 - [ ] Deve ser possível listar apenas carros disponíveis.
 - [ ] O usuário não deve estar logado para listar os carros disponíveis.
