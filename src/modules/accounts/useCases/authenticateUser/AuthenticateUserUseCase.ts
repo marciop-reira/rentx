@@ -36,17 +36,10 @@ class AuthenticateUserUseCase {
       throw new EmailOrPasswordInvalidException();
     }
 
-    const token = sign(
-      {
-        email: user.email,
-        admin: user.admin,
-      },
-      process.env.JWT_SECRET_KEY,
-      {
-        subject: user.id,
-        expiresIn: +process.env.JWT_EXPIRES_IN,
-      }
-    );
+    const token = sign({}, process.env.JWT_SECRET_KEY, {
+      subject: user.id,
+      expiresIn: +process.env.JWT_EXPIRES_IN,
+    });
 
     return {
       type: "Bearer",

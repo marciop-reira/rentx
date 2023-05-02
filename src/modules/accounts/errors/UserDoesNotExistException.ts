@@ -4,7 +4,7 @@ class UserDoesNotExistException extends Error {
   constructor() {
     super();
     this.code = 401;
-    this.message = "User does not exist..";
+    this.message = "User does not exist.";
   }
 }
 

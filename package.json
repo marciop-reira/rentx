@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modelues --respawn src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/shared/infra/database/typeorm/data-source.ts",
+    "seed:admin": "ts-node-dev src/shared/infra/database/typeorm/seed/admin.ts",
     "test": "jest"
   },
   "author": "",
