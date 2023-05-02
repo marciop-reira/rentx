@@ -1,7 +1,7 @@
 import { compare } from "bcrypt";
 
 import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory";
-import { AlreadyExistsException } from "@shared/errors/AlreadyExistsExceptions";
+import { AlreadyExistsException } from "@shared/errors/AlreadyExistsException";
 
 import { CreateUserUseCase } from "./CreateUserUseCase";
 

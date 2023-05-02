@@ -1,5 +1,5 @@
 import { CarsRepositoryInMemory } from "@modules/cars/repositories/in-memory/CarsRepositoryInMemory";
-import { AlreadyExistsException } from "@shared/errors/AlreadyExistsExceptions";
+import { AlreadyExistsException } from "@shared/errors/AlreadyExistsException";
 
 import { CreateCarUseCase } from "./CreateCarUseCase";
 

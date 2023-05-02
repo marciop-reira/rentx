@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 
 import { Car } from "@modules/cars/infra/typeorm/entities/Car";
 import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
-import { AlreadyExistsException } from "@shared/errors/AlreadyExistsExceptions";
+import { AlreadyExistsException } from "@shared/errors/AlreadyExistsException";
 
 interface IRequest {
   category_id: string;

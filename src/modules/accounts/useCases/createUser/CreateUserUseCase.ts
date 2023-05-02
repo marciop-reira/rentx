@@ -2,7 +2,7 @@ import { hash } from "bcrypt";
 import { inject, injectable } from "tsyringe";
 
 import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
-import { AlreadyExistsException } from "@shared/errors/AlreadyExistsExceptions";
+import { AlreadyExistsException } from "@shared/errors/AlreadyExistsException";
 
 interface IRequest {
   name: string;
