@@ -22,7 +22,7 @@
 - [x] Não deve ser possível cadastrar um carro com uma placa já cadastrada.
 - [ ] Não deve ser possível alterar a placa de uma carro já cadastrado.
 - [x] O carro deve ser cadastrado, por padrão, como disponível.
-- [ ] O registro de carros deve ser realizado por um usuário administrador.
+- [x] O registro de carros deve ser realizado por um usuário administrador.
 - [ ] Deve ser possível listar apenas carros disponíveis.
 - [ ] O usuário não deve estar logado para listar os carros disponíveis.
 - [ ] Não deve ser possível cadastrar uma especificação para um carro não registrado.
