@@ -1,11 +1,11 @@
+import { hash } from "bcrypt";
+
 import { EmailOrPasswordInvalidException } from "@modules/accounts/errors/EmailOrPasswordInvalidException";
 import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory";
 
-import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
 
 let usersRepositoryInMemory: UsersRepositoryInMemory;
-let createUserUseCase: CreateUserUseCase;
 let authenticateUserUseCase: AuthenticateUserUseCase;
 
 const user = {
@@ -18,14 +18,16 @@ const user = {
 describe("Authenticate User", () => {
   beforeAll(() => {
     usersRepositoryInMemory = new UsersRepositoryInMemory();
-    createUserUseCase = new CreateUserUseCase(usersRepositoryInMemory);
     authenticateUserUseCase = new AuthenticateUserUseCase(
       usersRepositoryInMemory
     );
   });
 
   it("should be able to authenticate an user", async () => {
-    await createUserUseCase.execute(user);
+    await usersRepositoryInMemory.create({
+      ...user,
+      password: await hash(user.password, 8),
+    });
 
     const result = await authenticateUserUseCase.execute({
       email: user.email,

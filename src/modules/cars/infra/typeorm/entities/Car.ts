@@ -24,8 +24,8 @@ class Car {
   @Column()
   daily_rate: number;
 
-  @Column({ type: "bool" })
-  available = true;
+  @Column()
+  available: boolean;
 
   @Column()
   license_plate: string;

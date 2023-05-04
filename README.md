@@ -4,10 +4,10 @@
 
 - [x] Deve ser possível cadastrar um novo carro.
 - [x] Deve ser possível listar todas as categorias.
-- [ ] Deve ser possível listar todos os carros.
-- [ ] Deve ser possível listar todos os carros disponíveis pela categoria.
-- [ ] Deve ser possível listar todos os carros disponíveis pela marca.
-- [ ] Deve ser possível listar todos os carros disponíveis pelo nome.
+- [x] Deve ser possível listar todos os carros disponíveis.
+- [x] Deve ser possível listar todos os carros disponíveis pela categoria.
+- [x] Deve ser possível listar todos os carros disponíveis pela marca.
+- [x] Deve ser possível listar todos os carros disponíveis pelo nome.
 - [ ] Deve ser possível cadastrar uma especificação para um carro.
 - [ ] Deve ser possível listar todas as especificações de um carro.
 - [ ] Deve ser possível cadastrar imagens do carro.
@@ -23,7 +23,7 @@
 - [ ] Não deve ser possível alterar a placa de uma carro já cadastrado.
 - [x] O carro deve ser cadastrado, por padrão, como disponível.
 - [x] O registro de carros deve ser realizado por um usuário administrador.
-- [ ] Deve ser possível listar apenas carros disponíveis.
+- [x] Deve ser possível listar apenas carros disponíveis.
 - [ ] O usuário não deve estar logado para listar os carros disponíveis.
 - [ ] Não deve ser possível cadastrar uma especificação para um carro não registrado.
 - [ ] Não deve ser possível cadastrar uma especificação já existente para um carro.

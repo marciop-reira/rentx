@@ -1,6 +1,7 @@
-import { Repository } from "typeorm";
+import { Equal, Repository } from "typeorm";
 
 import { ICreateCarDTO } from "@modules/cars/dtos/ICreateCarDTO";
+import { IListAllAvailableCarsDTO } from "@modules/cars/dtos/IListAllAvailableCarsDTO";
 import { appDataSource } from "@shared/infra/database/typeorm/data-source";
 
 import { ICarsRepository } from "../../../repositories/ICarsRepository";
@@ -37,12 +38,28 @@ class CarsRepository implements ICarsRepository {
     return car;
   }
 
-  findByLicensePlate(license_plate: string): Promise<Car> {
-    const car = this.repository.findOneBy({
+  async findByLicensePlate(license_plate: string): Promise<Car> {
+    const car = await this.repository.findOneBy({
       license_plate,
     });
 
     return car;
+  }
+
+  async listAllAvailableBy(filters: IListAllAvailableCarsDTO): Promise<Car[]> {
+    const queryBuilder = this.repository
+      .createQueryBuilder()
+      .where("available = :available", {
+        available: true,
+      });
+
+    Object.entries(filters).forEach(([index, value]) => {
+      if (value) {
+        queryBuilder.andWhere(`${index} = :${index}`, filters);
+      }
+    });
+
+    return queryBuilder.getMany();
   }
 }
 

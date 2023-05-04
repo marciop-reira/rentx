@@ -18,8 +18,8 @@ class User {
   @Column()
   driver_license: string;
 
-  @Column({ type: "bool" })
-  admin = false;
+  @Column()
+  admin: boolean;
 
   @Column()
   avatar?: string;
