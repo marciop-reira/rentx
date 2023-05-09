@@ -58,7 +58,7 @@ export class CreateCars1683032129727 implements MigrationInterface {
         ],
         foreignKeys: [
           new TableForeignKey({
-            name: "cars_category_id_fkey",
+            name: "fk_cars_category_id",
             columnNames: ["category_id"],
             referencedColumnNames: ["id"],
             referencedTableName: "categories",
@@ -67,7 +67,7 @@ export class CreateCars1683032129727 implements MigrationInterface {
         ],
         indices: [
           new TableIndex({
-            name: "cars_category_id_idx",
+            name: "idx_cars_category_id",
             columnNames: ["category_id"],
           }),
         ],

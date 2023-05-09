@@ -6,7 +6,12 @@ export function errors(
   response: Response,
   next: NextFunction
 ) {
-  return response.status(error.code || 500).json({
-    error: error.message,
+  const statusCode =
+    !Number.isNaN(error.code) && error.code >= 100 && error.code <= 599
+      ? error.code
+      : 500;
+
+  return response.status(statusCode).json({
+    error: statusCode === 500 ? "Internal Server Error" : error.message,
   });
 }
