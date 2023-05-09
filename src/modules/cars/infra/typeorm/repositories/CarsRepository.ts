@@ -55,7 +55,7 @@ class CarsRepository implements ICarsRepository {
 
     Object.entries(filters).forEach(([index, value]) => {
       if (value) {
-        queryBuilder.andWhere(`${index} = :${index}`, filters);
+        queryBuilder.andWhere(`${index} = :${index}`, { [index]: value });
       }
     });
 
