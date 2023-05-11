@@ -10,7 +10,7 @@
 - [x] Deve ser possível listar todos os carros disponíveis pelo nome.
 - [x] Deve ser possível cadastrar uma especificação para um carro.
 - [ ] Deve ser possível listar todas as especificações de um carro.
-- [ ] Deve ser possível cadastrar imagens do carro.
+- [x] Deve ser possível cadastrar imagens do carro.
 - [ ] Deve ser possível alugar um carro.
 
 ## Requisitos não funcionais
@@ -28,8 +28,8 @@
 - [x] Não deve ser possível cadastrar uma especificação para um carro não registrado.
 - [x] Não deve ser possível cadastrar uma especificação já existente para um carro.
 - [x] O registro de especificações deve ser realizado por um usuário administrador.
-- [ ] Deve ser possível cadastrar mais de uma imagem para o mesmo carro.
-- [ ] O registro de imagens deve ser realizado por um usuário administrador.
+- [x] Deve ser possível cadastrar mais de uma imagem para o mesmo carro.
+- [x] O registro de imagens deve ser realizado por um usuário administrador.
 - [ ] Não deve ser possível alugar um carro que não está disponível.
 - [ ] O aluguel deve ter duração mínima de 24 horas.
 - [ ] Não deve ser possível ter mais de um aluguel em aberto para o mesmo usuário.
