@@ -1,9 +1,4 @@
-import {
-  MigrationInterface,
-  QueryRunner,
-  Table,
-  TableForeignKey,
-} from "typeorm";
+import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class CreateCarsImages1683663442771 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
@@ -31,13 +26,19 @@ export class CreateCarsImages1683663442771 implements MigrationInterface {
           },
         ],
         foreignKeys: [
-          new TableForeignKey({
+          {
             name: "fk_cars_images_car_id",
             columnNames: ["car_id"],
             referencedColumnNames: ["id"],
             referencedTableName: "cars",
             onDelete: "CASCADE",
-          }),
+          },
+        ],
+        indices: [
+          {
+            name: "idx_cars_images_car_id",
+            columnNames: ["car_id"],
+          },
         ],
       })
     );
