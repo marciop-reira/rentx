@@ -17,13 +17,15 @@ const createCategoryController = new CreateCategoryController();
 const listCategoriesController = new ListCategoriesController();
 const importCategoriesController = new ImportCategoriesController();
 
-categoriesRoutes.use(authenticated);
-
-categoriesRoutes.post("/", admin, createCategoryController.handle);
+categoriesRoutes.post(
+  "/",
+  [authenticated, admin],
+  createCategoryController.handle
+);
 categoriesRoutes.get("/", listCategoriesController.handle);
 categoriesRoutes.post(
   "/import",
-  [admin, uploadCsv.single("file")],
+  [authenticated, admin, uploadCsv.single("file")],
   importCategoriesController.handle
 );
 

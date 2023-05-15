@@ -11,7 +11,7 @@ export const appDataSource = new DataSource({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   synchronize: false,
-  logging: true,
+  logging: false,
   entities: ["./src/modules/**/infra/typeorm/entities/*.ts"],
   subscribers: [],
   migrations: ["./src/shared/infra/database/typeorm/migrations/*.ts"],
