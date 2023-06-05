@@ -2,24 +2,18 @@ import { hash } from "bcrypt";
 import request from "supertest";
 import { v4 as uuidV4 } from "uuid";
 
+import { createRandomCategory } from "@shared/factories/category-factory";
+import { createRandomUser } from "@shared/factories/user-factory";
 import { appDataSource } from "@shared/infra/database/typeorm/data-source";
 import { app } from "@shared/infra/http/app";
 
-const userCredentials = {
-  email: "test@admin.com",
-  password: "123",
-};
-const category = {
-  name: "Category test",
-  description: "Description rest",
-};
-const category2 = {
-  name: "Category test 2",
-  description: "Description rest 2",
-};
+const userCredentials = createRandomUser();
+const category = createRandomCategory();
+const category2 = createRandomCategory();
+
 let token: string;
 
-describe("Create Category Controller", () => {
+describe("List Category Controller", () => {
   beforeAll(async () => {
     const id = uuidV4();
     const password = await hash(userCredentials.password, 8);

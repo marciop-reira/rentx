@@ -1,5 +1,9 @@
 interface IDateProvider {
-  compareInHours(start_date: Date, end_date: Date): number;
+  compare(
+    start_date: Date,
+    end_date: Date,
+    unit: "days" | "hours" | "minutes" | "seconds"
+  ): number;
   convertToUTC(date: Date): string;
   now(): Date;
 }

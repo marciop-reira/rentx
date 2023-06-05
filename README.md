@@ -11,11 +11,12 @@
 - [x] Deve ser possível cadastrar uma especificação para um carro.
 - [ ] Deve ser possível listar todas as especificações de um carro.
 - [x] Deve ser possível cadastrar imagens do carro.
-- [ ] Deve ser possível alugar um carro.
+- [x] Deve ser possível alugar um carro.
+- [ ] Deve ser possível realizar a devolução de um carro.
 
 ## Requisitos não funcionais
 
-- [ ] Utilizar a lib multer para upload dos arquivos.
+- [x] Utilizar a lib multer para upload dos arquivos.
 
 ## Regras de negócio
 
@@ -30,6 +31,11 @@
 - [x] O registro de especificações deve ser realizado por um usuário administrador.
 - [x] Deve ser possível cadastrar mais de uma imagem para o mesmo carro.
 - [x] O registro de imagens deve ser realizado por um usuário administrador.
-- [ ] Não deve ser possível alugar um carro que não está disponível.
-- [ ] O aluguel deve ter duração mínima de 24 horas.
-- [ ] Não deve ser possível ter mais de um aluguel em aberto para o mesmo usuário.
+- [x] Não deve ser possível alugar um carro que não está disponível.
+- [x] O aluguel deve ter duração mínima de 24 horas.
+- [x] Não deve ser possível ter mais de um aluguel em aberto para o mesmo usuário.
+- [x] Se o carro for devolvido com menos de 24 horas, deverá ser cobrada a diária completa.
+- [x] Ao realizar a devolução, o carro deve ser ficar disponível.
+- [x] Ao realizar a devolução, o usuário deverá ficar disponível para realizar outro aluguel.
+- [x] Ao realizar a devolução, deverá ser calculado o valor do aluguel.
+- [x] Caso a devolução ocorra após a data prevista de entrega, deverá ser cobrada multa proporcional aos dias em atraso.

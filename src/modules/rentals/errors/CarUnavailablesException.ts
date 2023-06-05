@@ -1,4 +1,4 @@
-class CarUnavailableExistException extends Error {
+class CarUnavailableException extends Error {
   public readonly code: number;
 
   constructor() {
@@ -8,4 +8,4 @@ class CarUnavailableExistException extends Error {
   }
 }
 
-export { CarUnavailableExistException };
+export { CarUnavailableException };

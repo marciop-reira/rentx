@@ -2,18 +2,14 @@ import { compare } from "bcrypt";
 
 import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory";
 import { AlreadyExistsException } from "@shared/errors/AlreadyExistsException";
+import { createRandomUser } from "@shared/factories/user-factory";
 
 import { CreateUserUseCase } from "./CreateUserUseCase";
 
 let usersRepositoryInMemory: UsersRepositoryInMemory;
 let createUserUseCase: CreateUserUseCase;
 
-const user = {
-  name: "test",
-  password: "password",
-  email: "test@example.com",
-  driver_license: "1.1.1.1",
-};
+const user = createRandomUser();
 
 describe("Create User", () => {
   beforeAll(() => {

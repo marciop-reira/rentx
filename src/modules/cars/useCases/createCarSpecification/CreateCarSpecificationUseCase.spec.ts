@@ -1,6 +1,8 @@
 import { CarsRepositoryInMemory } from "@modules/cars/repositories/in-memory/CarsRepositoryInMemory";
 import { SpecificationsRepositoryInMemory } from "@modules/cars/repositories/in-memory/SpecificationsRepositoryInMemory";
 import { NotFoundException } from "@shared/errors/NotFoundException";
+import { createRandomCar } from "@shared/factories/car-factory";
+import { createRandomSpecification } from "@shared/factories/specification-factory";
 
 import { CreateCarSpecificationUseCase } from "./CreateCarSpecificationUseCase";
 
@@ -8,25 +10,9 @@ let carsRepository: CarsRepositoryInMemory;
 let specificationsRepository: SpecificationsRepositoryInMemory;
 let createCarSpecificationUseCase: CreateCarSpecificationUseCase;
 
-const car = {
-  category_id: "7bf24bf8-ade1-4cef-88f8-617cd347a4f3",
-  name: "Fox",
-  description: "Short car",
-  daily_rate: 60,
-  license_plate: "FOX2023",
-  fine_amount: 15,
-  brand: "Volkswagen",
-};
-const specificationsTest = [
-  {
-    name: "Test",
-    description: "Description test",
-  },
-  {
-    name: "Test 2",
-    description: "Description test 2",
-  },
-];
+const car = createRandomCar();
+const specification = createRandomSpecification();
+const specification2 = createRandomSpecification();
 
 describe("Create Car Specification", () => {
   beforeAll(() => {
@@ -41,10 +27,10 @@ describe("Create Car Specification", () => {
   it("should be able to add a new specification to a car", async () => {
     const createdCar = await carsRepository.create(car);
     const createdSpecification = await specificationsRepository.create(
-      specificationsTest[0]
+      specification
     );
     const createdSpecification2 = await specificationsRepository.create(
-      specificationsTest[1]
+      specification2
     );
 
     const { specifications } = await createCarSpecificationUseCase.execute({

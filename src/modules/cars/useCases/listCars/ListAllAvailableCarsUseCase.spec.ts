@@ -1,30 +1,13 @@
 import { CarsRepositoryInMemory } from "@modules/cars/repositories/in-memory/CarsRepositoryInMemory";
+import { createRandomCar } from "@shared/factories/car-factory";
 
 import { ListAllAvailableCarsUseCase } from "./ListAllAvailableCarsUseCase";
 
 let carsRepository: CarsRepositoryInMemory;
 let listAllAvailableCarsUseCase: ListAllAvailableCarsUseCase;
 
-const availableCar = {
-  category_id: "df9803f6-acca-408f-b308-2fe484aa3007",
-  name: "Onix",
-  description: "Short car",
-  daily_rate: 100,
-  license_plate: "BRA2022",
-  fine_amount: 20,
-  brand: "Chevrolet",
-};
-
-const unavailableCar = {
-  category_id: "df9803f6-acca-408f-b308-2fe484aa3007",
-  name: "Prisma",
-  description: "Long car",
-  daily_rate: 100,
-  license_plate: "BRA2025",
-  fine_amount: 20,
-  available: false,
-  brand: "Chevrolet",
-};
+const availableCar = createRandomCar();
+const unavailableCar = createRandomCar(false);
 
 describe("List Cars", () => {
   beforeAll(() => {

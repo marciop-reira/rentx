@@ -2,17 +2,13 @@ import { hash } from "bcrypt";
 import request from "supertest";
 import { v4 as uuidV4 } from "uuid";
 
+import { createRandomCategory } from "@shared/factories/category-factory";
+import { createRandomUser } from "@shared/factories/user-factory";
 import { appDataSource } from "@shared/infra/database/typeorm/data-source";
 import { app } from "@shared/infra/http/app";
 
-const userCredentials = {
-  email: "test@admin.com",
-  password: "123",
-};
-const payload = {
-  name: "Category test",
-  description: "Description rest",
-};
+const userCredentials = createRandomUser();
+const payload = createRandomCategory();
 let token: string;
 
 describe("Create Category Controller", () => {

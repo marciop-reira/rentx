@@ -1,15 +1,13 @@
 import { CategoriesRepositoryInMemory } from "@modules/cars/repositories/in-memory/CategoriesRepositoryInMemory";
 import { AlreadyExistsException } from "@shared/errors/AlreadyExistsException";
+import { createRandomCategory } from "@shared/factories/category-factory";
 
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
 let categoriesRepositoryInMemory: CategoriesRepositoryInMemory;
 let createCategoryUseCase: CreateCategoryUseCase;
 
-const category = {
-  name: "Hatch",
-  description: "Short car",
-};
+const category = createRandomCategory();
 
 describe("Create Category", () => {
   beforeAll(() => {

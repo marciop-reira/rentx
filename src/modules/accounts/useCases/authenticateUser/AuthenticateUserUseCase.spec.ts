@@ -2,18 +2,14 @@ import { hash } from "bcrypt";
 
 import { EmailOrPasswordInvalidException } from "@modules/accounts/errors/EmailOrPasswordInvalidException";
 import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory";
+import { createRandomUser } from "@shared/factories/user-factory";
 
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase";
 
 let usersRepositoryInMemory: UsersRepositoryInMemory;
 let authenticateUserUseCase: AuthenticateUserUseCase;
 
-const user = {
-  name: "test",
-  password: "password",
-  email: "test@example.com",
-  driver_license: "1.1.1.1",
-};
+const user = createRandomUser();
 
 describe("Authenticate User", () => {
   beforeAll(() => {

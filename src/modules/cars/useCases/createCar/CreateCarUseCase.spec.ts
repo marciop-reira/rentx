@@ -1,20 +1,13 @@
 import { CarsRepositoryInMemory } from "@modules/cars/repositories/in-memory/CarsRepositoryInMemory";
 import { AlreadyExistsException } from "@shared/errors/AlreadyExistsException";
+import { createRandomCar } from "@shared/factories/car-factory";
 
 import { CreateCarUseCase } from "./CreateCarUseCase";
 
 let carsRepositoryInMemory: CarsRepositoryInMemory;
 let createCarUseCase: CreateCarUseCase;
 
-const car = {
-  category_id: "df9803f6-acca-408f-b308-2fe484aa3007",
-  name: "Onix",
-  description: "Short car",
-  daily_rate: 100,
-  license_plate: "BRA2023",
-  fine_amount: 20,
-  brand: "Chevrolet",
-};
+const car = createRandomCar();
 
 describe("Create Car", () => {
   beforeAll(() => {
