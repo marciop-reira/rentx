@@ -12,7 +12,8 @@
 - [ ] Deve ser possível listar todas as especificações de um carro.
 - [x] Deve ser possível cadastrar imagens do carro.
 - [x] Deve ser possível alugar um carro.
-- [ ] Deve ser possível realizar a devolução de um carro.
+- [x] Deve ser possível realizar a devolução de um carro.
+- [x] Deve ser possível listar todos os alugueis do usuário.
 
 ## Requisitos não funcionais
 

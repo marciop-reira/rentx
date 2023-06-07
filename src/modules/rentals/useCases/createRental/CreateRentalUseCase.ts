@@ -40,7 +40,7 @@ class CreateRentalUseCase {
       throw new CarUnavailableException();
     }
 
-    const userOpenRentals = await this.rentalsRepository.findOpenRentalByUser(
+    const userOpenRentals = await this.rentalsRepository.findOpenRentalByUserId(
       user_id
     );
 

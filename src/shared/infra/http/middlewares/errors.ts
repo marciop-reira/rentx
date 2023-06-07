@@ -6,6 +6,8 @@ export function errors(
   response: Response,
   next: NextFunction
 ) {
+  console.log(error);
+
   const statusCode =
     !Number.isNaN(error.code) && error.code >= 100 && error.code <= 599
       ? error.code
